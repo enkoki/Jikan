@@ -1,0 +1,35 @@
+"use client";
+
+import Image from 'next/image';
+import React from 'react';
+import { Anime } from '@/app/lib/fetchAnimes';
+
+interface AnimeGridProps {
+    animes: Anime[];
+}
+
+const AnimeGrid: React.FC<AnimeGridProps> = ({ animes }) => {
+    if (!animes || animes.length === 0) return <p className="text-gray-400">No anime found.</p>;
+
+    return (
+        <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-6 gap-y-8 justify-center mb-16 xl:mb-5'>
+            {animes.map((anime) => (
+                <div key={anime.mal_id} className='flex flex-col items-center'>
+                    <div className='w-[185px] h-[265px] relative'>
+                        <Image
+                            src={anime.images.jpg.image_url}
+                            alt={anime.title}
+                            fill
+                            className='rounded-md object-cover'
+                        />
+                    </div>
+                    <span className='mt-3 text-center text-sm md:text-base font-semibold'>
+                        {anime.title_english ?? anime.title}
+                    </span>
+                </div>
+            ))}
+        </div>
+    );
+}
+
+export default AnimeGrid;
