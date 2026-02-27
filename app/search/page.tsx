@@ -6,6 +6,7 @@ import { useSearchParams } from 'next/navigation';
 import { Anime, fetchSearchAnime, fetchAllTimePopularAnime } from '../lib/fetchAnimes';
 import AnimeGrid from '../components/Cards/HomeGrid';
 import Spinner from '../assets/icons/Spinner';
+import Footer from '../components/Footer/Footer';
 
 const SearchResults = () => {
     const searchParams = useSearchParams();
@@ -83,6 +84,7 @@ const SearchPage = () => {
             <Suspense fallback={<div className="flex justify-center p-10"><Spinner /></div>}>
                 <SearchResults />
             </Suspense>
+            <Footer />
         </>
     );
 };

@@ -8,7 +8,7 @@ interface AnimeGridProps {
 
 const LBCard: React.FC<AnimeGridProps> = ({ animes }) => {
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex-col gap-3 hidden lg:flex">
       {animes.map((anime, index) => (
         <div key={anime.mal_id} className="flex items-center gap-3 w-full">
           

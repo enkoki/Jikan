@@ -2,6 +2,7 @@ import Spinner from '@/app/assets/icons/Spinner';
 import { Anime, fetchAllTimePopularAnime } from '@/app/lib/fetchAnimes';
 import React, { useEffect, useState } from 'react'
 import LBCard from '../Cards/LBCard';
+import AnimeGrid from '../Cards/HomeGrid';
 
 const LB = () => {
     const [animes, setAnimes] = useState<Anime[]>([]);
@@ -33,6 +34,7 @@ const LB = () => {
                     {loading 
                         ? <Spinner />
                         : <LBCard animes={animes} />}
+                    {!loading && <AnimeGrid animes={animes} className={`grid grid-cols-2 sm:grid-cols-3 lg:hidden gap-x-6 gap-y-8 mb-16 xl:mb-5`}/>}
                 </div>
             </div>
         </>
