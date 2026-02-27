@@ -1,12 +1,21 @@
 export interface Anime {
-    mal_id: number;
-    title: string;
-    title_english?: string | null;
-    images: {
-        jpg: {
-            image_url: string;
-        }
+  mal_id: number;
+  title: string;
+  title_english?: string | null;
+
+  score: number | null; 
+  episodes: number | null;
+
+  images: {
+    jpg: {
+      image_url: string;
     };
+  };
+
+  genres: {
+    mal_id: number;
+    name: string;
+  }[];
 }
 
 export const fetchTrendingAnime = async (limit: number = 6): Promise<Anime[]> => {

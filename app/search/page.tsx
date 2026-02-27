@@ -35,7 +35,7 @@ const SearchResults = () => {
 
     return (
         <>
-            <div className="px-4 sm:px-6 md:px-8 text-[#adc0d2] flex flex-col justify-center items-center">
+            <div className="px-4 sm:px-6 md:px-8 text-[#adc0d2] flex flex-col justify-center items-start">
                 {!query && <h2 className="text-xl mb-4 font-bold self-start">Most Popular Anime</h2>}
                 {query && (
                     <h2 className="text-xl mb-4 font-bold self-start">

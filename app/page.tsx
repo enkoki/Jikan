@@ -6,6 +6,7 @@ import Trending from "./components/Anime/Trending";
 import AllTimePopular from "./components/Anime/AllTimePopular";
 import Upcoming from "./components/Anime/Upcoming";
 import Spinner from "./assets/icons/Spinner"; // Use your spinner for the fallback
+import LB from "./components/Leaderboard/LB";
 
 export default function Home() {
     return(
@@ -18,6 +19,7 @@ export default function Home() {
             </Suspense>
 			<Upcoming />
 			<AllTimePopular />
+            <LB />
         </>
     );
 }

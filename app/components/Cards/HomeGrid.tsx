@@ -15,7 +15,7 @@ const AnimeGrid: React.FC<AnimeGridProps> = ({ animes }) => {
     if (!animes || animes.length === 0) return <p className="text-gray-400">No anime found.</p>;
 
     return (
-        <div className={`grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 ${pathname == "/" ? "xl:grid-cols-6" : "2xl:grid-cols-7"} gap-x-6 gap-y-8 justify-center mb-16 xl:mb-5`}>
+        <div className={`grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 ${pathname == "/" ? "xl:grid-cols-6" : "2xl:grid-cols-7"} gap-x-6 gap-y-8 mb-16 xl:mb-5`}>
             {animes.map((anime) => (
                 <div key={anime.mal_id} className='transition-all duration-200 cursor-pointer flex flex-col items-center hover:scale-105 hover:text-[#79c3ef]'>
                     <div className='w-[185px] h-[265px] relative'>
