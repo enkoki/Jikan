@@ -27,7 +27,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#11161d] text-[#9fadbd] py-10 px-5 mt-10">
+    <footer className="relative  bottom-0 w-full bg-[#11161d] text-[#9fadbd] py-10 px-5 mt-5">
       <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8">
         {footerSections.map((section) => (
           <div key={section.title}>

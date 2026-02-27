@@ -84,7 +84,6 @@ const SearchPage = () => {
             <Suspense fallback={<div className="flex justify-center p-10"><Spinner /></div>}>
                 <SearchResults />
             </Suspense>
-            <Footer />
         </>
     );
 };
