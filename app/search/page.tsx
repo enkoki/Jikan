@@ -21,7 +21,7 @@ const SearchResults = () => {
             setLoading(true);
             let res;
             if (!query) {
-                res = await fetchAllTimePopularAnime(pageNum, 24);
+                res = await fetchAllTimePopularAnime(pageNum, 21);
             } else {
                 res = await fetchSearchAnime(query, pageNum, 12);
             }

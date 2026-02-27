@@ -27,7 +27,7 @@ const Sidebar = ({ setIsOpen, isOpen }: SidebarProps) => {
         <div className="absolute inset-0 bg-[#0b1622]/50" onClick={() => setIsOpen(false)} />
             <div className='bg-[#0b1621] min-h-screen w-screen sm:w-100 relative overflow-y-auto z-50 xl:hidden'> {/*bg-[#040404]*/}
                 <div className='h-[50px] xsm:h-[60px] md:h-[70px] shadow-md bg-[#0b1622] flex justify-between items-center py-2 px-10'>
-                <Image src={SiteLogo} alt="anisync-logo" className='w-10 h-10 xl:w-11 xl:h-11'/>
+                <Image src={SiteLogo} alt="aniliu-logo" className='w-8 h-8 xsm:w-10 xsm:h-10 xl:w-11 xl:h-11'/>
                 <Cross className='cursor-pointer' onclick={() => setIsOpen(false)}/>
             </div>
             <div className={`relative flex ${true ? 'justify-start' : 'justify-center'} items-center p-5 rounded-xl`}>

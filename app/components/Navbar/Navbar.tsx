@@ -16,7 +16,7 @@ const Navbar = ({isloggedin = true}) => {
      return (
         <>
             <header className='w-screen h-[50px] xsm:h-[60px] md:h-[70px] py-2 px-10 xl:px-25 flex justify-between items-center bg-[#0b1622]/90 backdrop-blur-md shadow-2xl fixed z-40 text-white'>
-                <Link href="/"><Image src={SiteLogo} alt="anisync-logo" className='w-8 h-8 xsm:w-10 xsm:h-10 xl:w-11 xl:h-11'/></Link>
+                <Link href="/"><Image src={SiteLogo} alt="aniliu-logo" className='w-8 h-8 xsm:w-10 xsm:h-10 xl:w-11 xl:h-11'/></Link>
                 <nav className='hidden xl:flex'>
                     <ul className='flex gap-10 font-bold text-[20px] justify-center items-center'>
                         <li className={pathname === '/search' ? 'text-(--primary)' : ''}><Link href="/search">Search</Link></li>
